@@ -11,7 +11,7 @@ layout: default
         <h3>Category: {{ page.category | capitalize}}</h3>
         {% assign author = site.author | where:'short_name', page.author | first %}
         {% if author %}
-        - <a href="{{author.url}}">{{author.name}}</a>
+        - <a href="{{ site.baseurl }}{{author.url}}">{{author.name}}</a>
         {% endif %}
     </p>
     

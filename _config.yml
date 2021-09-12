@@ -1,4 +1,4 @@
-title: "Search Sandbox"
+title: "Search sandbox"
 
 collections:
   authors:
@@ -21,7 +21,7 @@ defaults:
       layout: "default"
 
 url: "http://127.0.0.1:4000/" # the base hostname & protocol for your site
-
+baseurl: "/search-sandbox"
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag

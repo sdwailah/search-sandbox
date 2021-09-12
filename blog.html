@@ -1,0 +1,25 @@
+---
+title: Blog
+---
+<div class="container">
+  <h1>Latest Posts</h1>
+    
+    <!-- {{site.categories.fruit}} -->
+    {% for category in site.categories%}
+      <h3 class="catagory">{{category[0] | capitalize}}</h3>
+      <ul>
+      {% for post in category[1] %}
+        <li><a href={{post.url}}>{{post.title}}</a></li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+
+  <!-- <ul>
+    {% for post in site.posts %}
+      <li>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        {{ post.excerpt }}
+      </li>
+    {% endfor %}
+  </ul> -->
+</div>

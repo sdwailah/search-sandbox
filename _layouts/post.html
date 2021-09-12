@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div class="container">
+    <h2>{{ page.title }}</h2>
+    
+    <p>
+        {{ page.date | date_to_string }}
+        <br />
+        <h3>Category: {{ page.category | capitalize}}</h3>
+        {% assign author = site.author | where:'short_name', page.author | first %}
+        {% if author %}
+        - <a href="{{author.url}}">{{author.name}}</a>
+        {% endif %}
+    </p>
+    
+    {{ content }}
+
+</div>
